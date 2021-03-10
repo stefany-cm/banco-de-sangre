@@ -1,0 +1,31 @@
+
+:root {
+    --main-color: #1978b3;
+    --background-color: #FEECEA;
+    --important-color: #FF4E3A;
+    --warning-color: #FFE654;
+    --success-color: #21FF8B;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: var(--main-color);
+    border: #1976B1;
+}
+
+.btn-circle { 
+    width: 40px; 
+    height: 40px; 
+    padding:7px 0px; 
+    border-radius: 20px; 
+    font-size: 15px; 
+    color: var(--important-color);
+    text-decoration: none;
+    text-align: center; 
+    background-color: var(--background-color);
+    cursor: not-allowed;
+} 
+
+td, tr {
+    text-align: center; 
+    vertical-align: middle;
+}

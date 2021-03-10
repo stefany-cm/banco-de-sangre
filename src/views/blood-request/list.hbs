@@ -1,0 +1,42 @@
+<h1 class="font-weight-bold text-left py-3 px-md-5">Solicitudes de sangre</h1>
+<p class="text-left px-md-5">A continuación se muestran las solicitudes de sangre activas <a href="/blood-request/add">Crea una</a> si lo necesitas c:</p>
+
+<div class="container col-11">
+    <table class="table table-sm" data-search="true">
+        <thead>
+            <tr>
+                <th scope="col">Grupo sanguineo</th>
+                <th scope="col">Unidades (450cc)</th>
+                <th scope="col">Fecha fin</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Sexo donante</th>
+                <th scope="col">Lugar</th>
+                <th scope="col">Banco de sangre</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each blood_requests}}
+            <tr>
+                <td>
+                    <a type="button" class="btn-circle">{{grupo_sanguineo}}</a>
+                </td>
+                <td>{{cantidad}}</td>
+                <td>{{fecha_fin}}</td>
+                <td>{{estado}}</td>
+                <td>{{sexo_donante}}</td>
+                <td>{{lugar}}</td>
+                <td>{{banco_sangre}}</td>
+                <td>
+                    <a href="/blood-request/donation/{{id}}" type="button" class="btn btn-primary pl-4 pr-4">Donar</a>
+                </td>
+                <td>
+                    <a href="/blood-request/edit/{{id}}" type="button" class="btn btn-secondary pl-4 pr-4">Editar</a>
+                </td>
+                <td>
+                    <a href="/blood-request/delete/{{id}}" type="button" class="btn btn-danger pl-4 pr-4">Eliminar</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,50 @@
+<div class="container p-3">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card border-light">
+                <div class="card-header">
+                    <h3 class="font-weight-bold text-center py-3 px-md-5">Editar solicitud de sangre</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/blood-request/edit/{{blood_request.id}}" method="POST">
+                        <div class="form-group">
+                            <label>Cantidad de sangre:</label></br>
+                            <input type="number" value={{blood_request.cantidad}} class="form-control" name="cantidad_sangre" min="1" max="10000" style="width: 100%;" >
+                            <label>Fecha de finalizacion:</label></br>
+                            <input type="date" value="2021-09-12" class="form-control" name="fecha_finalizacion">
+                            <fieldset>
+                                <label>Sexo del donador:</label></br>
+                                <label><input type="radio" checked="true" name="sexo" value="H"> Hombre</label>
+                                <label><input type="radio" name="sexo" value="M"> Mujer</label>
+                            </fieldset>
+                            <label>Grupo sanguineo:</label></br>
+                            <select name="grupo_sanguineo" style="width:100%;">
+                                {{#each blood_group}}
+                                    <option value={{id}}>{{grupo_sangre}}</option>
+                                {{/each}}
+                            </select></br>
+
+                            <label>Banco de sangre:</label></br>
+                            <select name="banco_sangre" style="width:100%;">
+                                {{#each blood_bank}}
+                                    <option value={{id}}>{{nombre}}</option>
+                                {{/each}}
+                            </select>
+                        </div> 
+                        <div class="form-group justify-content-center">
+                            <button class="btn-primary btn btn-block">
+                                Editar
+                            </button>
+                            <a href="/blood-request" class="btn-danger btn btn-block">
+                                Cancelar
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 p-5 m-5">
+            <img src="https://image.freepik.com/vector-gratis/ilustracion-concepto-desarrollo-aplicaciones_114360-5035.jpg" alt="Blood-request">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container p-3">
+    <div class="row">
+        <div class="col-md-5 py-5">
+            <div class="card border-light py-3">
+                <div class="card-header">
+                    <h3 class="font-weight-bold text-center py-3 px-md-5">Donación de sangre</h3>
+                </div>
+                <div class="card-body">
+                    <form action="add/{{id}}" method="POST">
+                        <div class="form-group">
+                            <label>¿Cuantas unidades de sangre fueron donadas?:</label></br>
+                            <input type="number" class="form-control" name="cantidad_sangre" min="1" max="10000">
+                        </div> 
+                        <div class="form-group justify-content-center">
+                            <button class="btn-primary btn btn-block">
+                                Registrar donación
+                            </button>
+                            <a href="/blood-request" class="btn-danger btn btn-block">
+                                Cancelar
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 p-2 m-4">
+            <img src="https://image.freepik.com/vector-gratis/donante-sangre-enfermera_74855-6262.jpg" alt="Blood-request">
+        </div>
+    </div>
+</div>
